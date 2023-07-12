@@ -1,0 +1,56 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+ }
+
+.container {
+    width: 400px;
+}
+
+.ue {
+    width: 400px;
+    height: 100px;
+    background-color: #141f40;
+}
+
+.hidari {
+    width: 150px;
+    height: 250px;
+    background-color: #80bfa8;
+    float: left;
+}
+
+.dbd400 {
+    width: 150px;
+    height: 50px;
+    background-color: #dbd400;
+    float: left;
+}
+
+.mannaka {
+    width: 150px;
+    height: 100px;
+    background-color: #0093b7;
+    float: left;
+}
+
+.ff9e6b {
+    width: 100px;
+    height: 150px;
+    background-color: #ff9e6b;
+    float: right;
+}
+
+.migishita {
+    width: 250px;
+    height: 100px;
+    background-color: #8c2727;
+    float: left;
+}
+
+.d98d30 {
+    width: 400px;
+    height: 100px;
+    background-color: #d98d30;
+}

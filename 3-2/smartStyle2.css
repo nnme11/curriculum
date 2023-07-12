@@ -1,0 +1,70 @@
+@media screen and (max-width: 767px) {
+    .container {
+        width: 300px;
+    }
+
+    .ue {
+        width: 300px;
+    }
+    
+    .hidari {
+        width: 100px;
+    }
+    
+    .dbd400 {
+        width: 125px;
+    }
+    
+    .mannaka {
+        width: 125px;
+    }
+    
+    .ff9e6b {
+        width: 75px;
+    }
+    
+    .migishita {
+        width: 200px;
+    }
+    
+    .d98d30 {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .container {
+        width: 150px;
+    }
+
+    .ue {
+        width: 150px;
+    }
+    
+    .hidari {
+        width: 150px;
+    }
+    
+    .dbd400 {
+        width: 150px;
+    }
+    
+    .mannaka {
+        width: 150px;
+    }
+    
+    .ff9e6b {
+        width: 150px;
+    }
+    
+    .migishita {
+        width: 150px;
+    }
+    
+    .d98d30 {
+        width: 150px;
+    }
+
+    
+    
+}
