@@ -26,13 +26,13 @@ public class CreateEntity {
 	@Id
 	@Column(name = "task_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer expense_id;
+	private Integer task_id;
 	
 	/**
 	 * やること
 	 */
 	@Column(name = "task")
-	private String item;
+	private String task;
 
 	/**
 	 * 締切
