@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
+<div class="Form">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" th:href="@{/css/edit.css}">
+		<title>タスク新規登録</title>
+	</head>
+
+	<h2>タスク修正</h2>
+	<form th:action="@{/edit/create}" th:object="${editRequest}" th:method="post">
+
+		<div th:if="${validationError}" th:each="error : ${validationError}">
+			<label class="text-danger" th:text="${error}"></label>
+		</div>
+
+		<div class="Form-Item">
+			<p class="Form-Item-Label">
+				<span class="Form-Item-Label-Required">必須</span>タスク
+			</p>
+			<input type="text" th:field="*{task}" class="Form-Item-Input" placeholder="漢字ドリル">
+		</div>
+
+		<div class="Form-Item">
+			<p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>締切</p>
+			<input type="date" th:field="*{deadline}" class="Form-Item-Input">
+		</div>
+
+		<div class="Form-Item">
+			<p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>ステータス</p>
+			<input type="text" th:field="*{status}" class="Form-Item-Input" placeholder="未完了">
+		</div>
+
+		<button class="Form-Btn-a" input type="submit">登録</button>
+	</form>
+</div>
+
+</div>
+<a th:href="@{/list}"><button class="Form-Btn-r">戻る</button></a>
 </body>
+
 </html>

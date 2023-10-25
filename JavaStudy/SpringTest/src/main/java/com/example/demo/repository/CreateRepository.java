@@ -9,4 +9,4 @@ import com.example.demo.entity.CreateEntity;
  * タスク新規作成 Repository
  */
 @Repository
-public interface CreateRepository extends JpaRepository<CreateEntity, Long> {}
+public interface CreateRepository extends JpaRepository<CreateEntity, Integer> {}

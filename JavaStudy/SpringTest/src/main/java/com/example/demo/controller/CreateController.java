@@ -36,7 +36,7 @@ public class CreateController {
 	 */
 	@GetMapping(value = "/create")
 	public String displayAdd(Model model) {
-		model.addAttribute("expenseClaimRequest", new CreateRequest());
+		model.addAttribute("createRequest", new CreateRequest());
 		return "create";
 	}
 
