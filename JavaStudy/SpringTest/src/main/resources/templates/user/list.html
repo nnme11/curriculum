@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-</body>
-</html>
+<div class="Form">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" th:href="@{/css/list.css}">
+		<title>タスク一覧</title>
+	</head>
+
+
+	<body>
+		<h2>タスク一覧/h2>
+
+		<div class="Form-Item">
+		</div>
+
+		<table border="1">
+			<thead>
+				<tr>
+					<th>タスクID</th>
+					<th>タスク</th>
+					<th>締切</th>
+					<th>ステータス</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="create : ${list}" th:object="${create}" class="align-middle">
+					<td th:text="*{task_id}"></td>
+					<td th:text="*{task}"></td>
+					<td th:text="${#temporals.format(create.deadline, 'yyyy/MM/dd')}"></td>
+					<td th:text="*{status}"></td>
+					<td><a th:href="@{/user/{task_id}/edit(task_id=${create.task_id})}"><button class="Form-Btn-e">編集</button></a></td>
+				</tr>
+			</tbody>
+		</table>
+		<a th:href="@{/user/list}"><button class="Form-Btn-r">戻る</button></a>
+	</body>
+</div>
