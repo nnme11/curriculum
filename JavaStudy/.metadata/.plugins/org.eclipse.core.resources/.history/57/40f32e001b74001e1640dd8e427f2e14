@@ -47,7 +47,7 @@
 </div>
 
 </div>
-<a th:href="@{/list}"><button class="Form-Btn-r">タスク一覧</button></a>
+<a th:href="@{/list}"><button class="Form-Btn-r">戻る</button></a>
 </body>
 
 </html>

@@ -67,7 +67,7 @@ public class EditController {
 		}
 		// タスク編集
 		editService.update(editRequest);
-		return "edit";
+		return "/list";
 	}
 
 }
