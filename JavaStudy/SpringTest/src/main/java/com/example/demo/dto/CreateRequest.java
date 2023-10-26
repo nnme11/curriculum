@@ -22,7 +22,7 @@ public class CreateRequest implements Serializable {
 	/**
 	 * タスク
 	 */
-	@NotNull(message = "タスクを入力してください")
+	@NotEmpty(message = "タスクを入力してください")
 	@Size(max = 50, message = "項目は50文字以内で入力してください")
 	private String task;
 	

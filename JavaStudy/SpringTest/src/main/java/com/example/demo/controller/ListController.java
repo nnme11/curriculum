@@ -20,16 +20,16 @@ public class ListController {
 	 * タスク一覧 Service
 	 */
 	@Autowired
-	private ListService createService;
+	private ListService listService;
 
 	/**
 	 * タスク一覧画面を表示
 	 * @param model Model
 	 * @return タスク一覧画面
 	 */
-	@GetMapping(value = "/ist/{user_id}")
+	@GetMapping(value = "/list")
 	public String displayList(Model model) {
-		List<ListEntity> list = createService.searchAll();
+		List<ListEntity> list = listService.searchAll();
 		model.addAttribute("list", list);
 		return "list";
 	}

@@ -17,12 +17,13 @@ import lombok.Data;
 @Data
 public class EditRequest implements Serializable {
 
+	@NotNull(message = "タスクIDを入力してください")
 	private Integer task_id;
 	
 	/**
 	 * タスク
 	 */
-	@NotNull(message = "タスクを入力してください")
+	@NotEmpty(message = "タスクを入力してください")
 	@Size(max = 50, message = "項目は50文字以内で入力してください")
 	private String task;
 	

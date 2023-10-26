@@ -19,13 +19,14 @@ public class ListService {
 	 * タスク一覧 Repository
 	 */
 	@Autowired
-	private ListRepository expenseListRepository;
+	private ListRepository listRepository;
 
 	/**
 	 * タスク一覧 全検索
 	 * @return 検索結果
 	 */
+	
 	public List<ListEntity> searchAll() {
-		return expenseListRepository.findAll();
+		return listRepository.findAll();
 	}
 }

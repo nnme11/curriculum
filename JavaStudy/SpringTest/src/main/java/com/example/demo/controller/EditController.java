@@ -53,7 +53,7 @@ public class EditController {
 	 * @param model Model
 	 * @return タスク一覧画面
 	 */
-	@PostMapping("/edit/create")
+	@PostMapping("edit/create")
 	public String edit(@Validated @ModelAttribute EditRequest editRequest, BindingResult result, Model model) {
 
 		if (result.hasErrors()) {
@@ -67,7 +67,7 @@ public class EditController {
 		}
 		// タスク編集
 		editService.update(editRequest);
-		return "redirect:/create";
+		return "/list";
 	}
 
 }

@@ -13,6 +13,7 @@ import com.example.demo.repository.EditRepository;
  */
 @Service
 @Transactional(rollbackFor = Exception.class)
+//@EqualsAndHashCode(callSuper = false)
 public class EditService {
 
 	/**

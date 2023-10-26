@@ -20,6 +20,13 @@
 
 		<div class="Form-Item">
 			<p class="Form-Item-Label">
+				<span class="Form-Item-Label-Required">必須</span>タスクID
+			</p>
+			<input type="text" th:field="*{task_id}" class="Form-Item-Input">
+		</div>
+
+		<div class="Form-Item">
+			<p class="Form-Item-Label">
 				<span class="Form-Item-Label-Required">必須</span>タスク
 			</p>
 			<input type="text" th:field="*{task}" class="Form-Item-Input" placeholder="漢字ドリル">

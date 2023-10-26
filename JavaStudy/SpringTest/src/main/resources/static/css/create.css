@@ -1,0 +1,173 @@
+.Form {
+    margin-top: 80px;/*上部のマージンを80pxに設定し、フォームをページ上部から少し下に配置*/
+    margin-left: auto;/*左右のマージンを自動で調整して、フォームを水平方向に中央に配置*/
+    margin-right: auto;
+    max-width: 720px;/*フォームの最大幅を720pxに制限。画面幅が720pxを超える場合、フォームはその幅で固定*/
+  }
+  @media screen and (max-width: 480px) {/*.Form のレスポンシブスタイル*/
+    .Form {
+      margin-top: 40px;
+    }
+  }
+  .Form-Item {/*フォーム内の各フォームアイテム（入力フィールドやラベルなど）をスタイル化*/
+    border-top: 1px solid #ddd;/*アイテム間の区切りや余白を設定*/
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;/*アイテムを水平に配置し、垂直方向に中央に揃え*/
+  }
+  @media screen and (max-width: 480px) {
+    .Form-Item {
+      padding-left: 14px;
+      padding-right: 14px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      flex-wrap: wrap;
+    }
+  }
+  .Form-Item:nth-child(5) {
+    border-bottom: 1px solid #ddd;/*5番目のアイテムに対して下部の境界線を追加*/
+  }
+  .Form-Item-Label {/*フォームアイテム内のラベルをスタイル化 ラベルの幅、フォントサイズ、太字の設定*/
+    width: 100%;
+    max-width: 248px;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 480px) {
+    .Form-Item-Label {
+      max-width: inherit;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+    }
+  }
+  .Form-Item-Label.isMsg {/*メッセージ用のラベルに追加のスタイルを適用*/
+    margin-top: 8px;
+    margin-bottom: auto;
+  }
+  @media screen and (max-width: 480px) {
+    .Form-Item-Label.isMsg {
+      margin-top: 0;
+    }
+  }
+  .Form-Item-Label-Required {/*必須フィールドのラベルに追加のスタイルを適用*/
+    border-radius: 6px;
+    margin-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 48px;
+    display: inline-block;
+    text-align: center;
+    background: #5bc8ac;
+    color: #fff;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 480px) {
+    .Form-Item-Label-Required {
+      border-radius: 4px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      width: 32px;
+      font-size: 10px;
+    }
+  }
+  .Form-Item-Input {/*テキスト入力フィールドとテキストエリアのスタイルを設定*/
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-left: 40px;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 48px;
+    flex: 1;
+    width: 100%;
+    max-width: 410px;
+    background: #eaedf2;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 480px) {
+    .Form-Item-Input {
+      margin-left: 0;
+      margin-top: 18px;
+      height: 40px;
+      flex: inherit;
+      font-size: 15px;
+    }
+  }
+  .Form-Item-Textarea {/*テキスト入力フィールドとテキストエリアのスタイルを設定 テキストエリアに特有のスタイルを追加*/
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-left: 40px;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 216px;
+    flex: 1;
+    width: 100%;
+    max-width: 410px;
+    background: #eaedf2;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 480px) {
+    .Form-Item-Textarea {
+      margin-top: 18px;
+      margin-left: 0;
+      height: 200px;
+      flex: inherit;
+      font-size: 15px;
+    }
+  }
+  .Form-Btn-a {/*フォーム内のボタン（.Form-Btn-a および .Form-Btn-r）のスタイルを設定*/
+    border-radius: 6px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 280px;
+    display: block;/* ボタンをブロックレベルの要素として表示し、幅いっぱいに表示*/
+    letter-spacing: 0.05em;/* 文字間隔を0.05emに設定*/
+    background: #5bc8ac;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+  }
+  @media screen and (max-width: 480px) {
+    .Form-Btn-a {
+      margin-top: 24px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      width: 160px;
+      font-size: 16px;
+    }
+  }
+  .Form-Btn-r {
+    border-radius: 6px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 280px;
+    display: block;
+    letter-spacing: 0.05em;
+    background: #9a9a9a;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+  }
+  @media screen and (max-width: 480px) {
+    .Form-Btn-r {
+      margin-top: 24px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      width: 160px;
+      font-size: 16px;
+    }
+  }
+  /*このCSSコードは、フォームとそのアイテムを中央に配置し、各要素に必要なスタイルを適用するためのものです。
+  また、画面幅に応じて適切なレスポンシブスタイルも提供*/
+
