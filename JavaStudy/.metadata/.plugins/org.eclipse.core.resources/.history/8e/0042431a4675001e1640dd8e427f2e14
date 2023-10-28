@@ -68,7 +68,6 @@
   }
 
   .Form-Btn-e {
-    border: none;
     border-radius: 6px;
     margin-top: 4px;
     margin-bottom: 4px;
@@ -120,7 +119,6 @@ table {
  
 
   .Form-Btn-r {
-    border: none;
     border-radius: 6px;/*ボタンの角をわずかに丸める6pxのボーダーラジウスを設定*/
     margin-top: 32px;
     margin-left: auto;

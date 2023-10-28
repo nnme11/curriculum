@@ -76,6 +76,6 @@ public class EditController {
 	
 		// 顧安情報の削除
 		editService.delete(task_id);
-		return "redirect:/list";
+		return "redirect:/List";
 	}
 }

@@ -9,7 +9,7 @@ import com.example.demo.entity.EditEntity;
 import com.example.demo.repository.EditRepository;
 
 /**
- * タスク Service
+ * 経費情報 Service
  */
 @Service
 @Transactional(rollbackFor = Exception.class)
@@ -17,13 +17,13 @@ import com.example.demo.repository.EditRepository;
 public class EditService {
 
 	/**
-	 * タスク Repository
+	 * 経費情報 Repository
 	 */
 	@Autowired
 	private EditRepository editRepository;
 
 	/**
-	 * タスク 主キー検索
+	 * 経費情報 主キー検索
 	 * @return 検索結果
 	 */
 	public EditEntity findById(Integer task_id) {
@@ -31,7 +31,7 @@ public class EditService {
 	}
 
 	/**
-	 * タスク 更新
+	 * 経費情報 更新
 	 */
 	public void update(EditRequest editRequest) {
 		EditEntity editEntity = findById(editRequest.getTask_id());
@@ -43,7 +43,7 @@ public class EditService {
 	}
 	
 	/**
-	 * タスク 削除
+	 * 経費情報 削除
 	 */
 	public void delete(Integer task_id) {
 		EditEntity editEntity = findById(task_id);

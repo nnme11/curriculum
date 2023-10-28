@@ -119,6 +119,7 @@
     }
   }
   .Form-Btn-a {/*フォーム内のボタン（.Form-Btn-a および .Form-Btn-r）のスタイルを設定*/
+    border: none;
     border-radius: 6px;
     margin-top: 32px;
     margin-left: auto;
@@ -144,6 +145,7 @@
     }
   }
   .Form-Btn-r {
+	border: none;
     border-radius: 6px;
     margin-top: 32px;
     margin-left: auto;
