@@ -74,7 +74,7 @@ public class EditController {
 	@GetMapping("/user/{task_id}/delete")
 	public String delete(@PathVariable Integer task_id, Model model) {
 	
-		// タスク削除
+		// 顧安情報の削除
 		editService.delete(task_id);
 		return "redirect:/list";
 	}
