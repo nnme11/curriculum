@@ -103,7 +103,7 @@ public class UserController {
 	   * @return  ユーザー編集画面
 	   */
 	  @GetMapping("/user/{id}/edit")
-	  public String displayEdit(@PathVariable Integer id, Model model) {
+	  public String displayEdit(@PathVariable  Integer id, Model model) {
 		UserEntity user = userService.findById(id);
 	    UserUpdateRequest userUpdateRequest = new UserUpdateRequest();
 	 //実装5行
@@ -134,18 +134,4 @@ public class UserController {
 	    userService.update(userUpdateRequest);
 	    return String.format("redirect:/user/%d", userUpdateRequest.getId());
 	  }
-	  
-	  /**
-		 * ユーザー情報削除
-		 * @param  id 表示するユーザーID
-		 * @param  model Model
-		 * @return  ユーザー情報詳細画面
-		 */
-		@GetMapping("/user/{id}/delete")
-		public String delete(@PathVariable Integer id, Model model) {
-			// ユーザー情報の削除実装2行
-			userService.delete(id);
-		    return "redirect:/user/list";
-		}
-
 }
