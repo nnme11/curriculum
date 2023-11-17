@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -85,8 +86,11 @@ public class UserController {
 	 * @param  model Model
 	 * @return  ユーザー情報詳細画面
 	 */
-	@RequestMapping("/user/{id}")
+	@GetMapping("/user/{id}")
 	public String displayView(@PathVariable Integer id, Model model) {
+		//実装2行
+		UserEntity user = userService.findById(id);
+	    model.addAttribute("userData", user);
 		return "user/view";
 
 	}
